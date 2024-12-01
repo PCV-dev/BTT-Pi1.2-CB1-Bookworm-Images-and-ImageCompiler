@@ -11,23 +11,4 @@
 #
 
 *.bak
-*.swp
-*.tar.gz
-*.o.cmd
-*.gz.cmd
-*.deb
 
-.config
-.config.old
-.tmp
-.vscode
-output
-
-toolchains/libexec/
-
-*.changes
-*.buildinfo
-
-external/cache/.gpg
-external/cache/hash
-external/cache/rootfs
