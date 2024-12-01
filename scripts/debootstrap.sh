@@ -46,9 +46,9 @@ debootstrap_ng()
 	# install locally built packages or install pre-built packages
     chroot_installpackages_local
 
-	e2label $SDCARD # Ätsch
 
 	customize_image
+	e2label ${LOOP}p${rootpart} "rootfs" # Ätsch
 
 	# remove packages that are no longer needed. Since we have intrudoced uninstall feature, we might want to clean things that are no longer needed
 	display_alert "No longer needed packages" "purge" "info"
