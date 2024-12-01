@@ -1,0 +1,1 @@
+cmd_u-boot-dtb.img := ./tools/mkimage -f auto -A arm -T firmware -C none -O u-boot -a 0x4a000000 -e 0x4a000000 -p 0x0 -n "U-Boot 2021.10"-->BTT-CB1" for sunxi board" -E  -b arch/arm/dts/sun50i-h616-biqu.dtb  -d u-boot-nodtb.bin u-boot-dtb.img >/dev/null 

@@ -1,0 +1,1 @@
+cmd_all := ./tools/binman/binman  --toolpath ./tools  build -u -d u-boot.dtb -O . -m --allow-missing -I . -I . -I ./board/sunxi -I arch/arm/dts -a of-list="sun50i-h616-biqu" -a atf-bl31-path= -a opensbi-path= -a default-dt="sun50i-h616-biqu" -a scp-path= -a spl-bss-pad=1 -a tpl-bss-pad=1 -a spl-dtb= -a tpl-dtb= 
