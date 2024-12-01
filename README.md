@@ -1,6 +1,6 @@
 
 
-# Debian Bookworm for BTT Pi1.2 - CLI BUILD - AllWinner H616
+# Debian Bookworm for BTT Pi1.2 / CB1 - CLI BUILD - AllWinner H616
 
 It's done. The build tool is now working. It can build CLI_Standard and CLI_Minimal images. Kernel and Bootloader individually also work. Please use it to build your own images. Please note that you should already know what you're doing. Toolchains are not all the same. And a kernel needs to be configured first. Support requests like "I tried something and it doesn't work" will not be answered.
 
@@ -24,16 +24,16 @@ sudo apt-get install aptly aria2 libfdt-dev libssl-dev
 
 ## Versions Included
 
-|  Part  | Version  |
-| :----: | :------: |
-| uboot  | v2021.10 |
-| kernel | v6.1.118 |
-| T.Chai | v11.2    |
+|  Part   | Version  |
+| :----:  | :------: |
+| uboot   | v2021.10 |
+| kernel  | v6.1.118 |
+| T.Chain | v11.2    |
 
 ## Install / deployment
 
-To automatically install all required packages, run the `install.sh` script as root.
-You are also welcome to install the packages manually. **BUT** the `unpack_archives` script **must** be executed, otherwise files will be missing.
+To automatically install all required packages, run the `Install.sh` script as root.
+You are also welcome to install the packages manually. **BUT** the `Unzip_FileList_eng.sh` script **must** be executed, otherwise files will be missing.
 
 
 ## Project Build
@@ -67,6 +67,6 @@ Please note that ready-made releases will soon be available for download, and I 
 - [Allwinner Online Development Forum](https://bbs.aw-ol.com/topic/2054/mq-quad-h616-%E4%B8%BB%E7%BA%BF%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95-u-boot-kernel-buildroot/17)
 
 
-![Besucherzähler](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/PCV-dev/CB1-Kernel)
+![Besucherzähler](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/PCV-dev/BTT-Pi1.2-CB1-Bookworm-Images-and-ImageCompiler.git)
 
 
