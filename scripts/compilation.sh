@@ -67,7 +67,7 @@ compile_atf()
 
 
 	local toolchain # Ätsch
-	toolchain=$(find_toolchain "$ATF_COMPILER" "$ATF_USE_GCC")
+	toolchain=$(find_toolchain "$ATF_COMPILER" "$ATF_USE_GCC") #Ätsch steuert die Toolchainauswahl
 	[[ -z $toolchain ]] && exit_with_error "Could not find required toolchain" "${ATF_COMPILER}gcc $ATF_USE_GCC"
 
 
