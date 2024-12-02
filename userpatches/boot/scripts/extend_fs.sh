@@ -32,9 +32,9 @@ EOF
 sudo resize2fs /dev/${filelist[$c-1]}
 unset filelist
 
-#-----------------
-# username=biqu
+#----------------- Ätsch -----------------
+# username=bttpi
 # sudo usermod -a -G root $username         # add biqu to root group
-# sudo gpasswd -d biqu root     # remove biqu from root group
+# sudo gpasswd -d bttpi root     # remove biqu from root group
 
 sudo sed -i '/^.\/extend_fs.sh/s/^/#/' /boot/scripts/btt_init.sh

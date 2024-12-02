@@ -9,7 +9,7 @@
 
 | USER    =>    PWD   |
 |:-------------------:
-| USER_NAME="bttPi"  |
+| USER_NAME="bttpi"   |
 | USER_PWD="pcv"      |
 | ROOT_PWD="root"     |
 

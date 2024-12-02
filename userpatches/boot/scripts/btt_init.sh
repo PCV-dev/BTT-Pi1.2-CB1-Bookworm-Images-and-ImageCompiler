@@ -1,11 +1,11 @@
 #!/bin/bash
 
-sudo chown biqu:biqu /home/biqu/ -R
+sudo chown bttpi:bttpi /home/bttpi/ -R
 # sudo ntpdate stdtime.gov.hk
 
 cd /boot/gcode
 if ls *.gcode > /dev/null 2>&1;then
-    sudo cp ./*.gcode /home/biqu/printer_data/gcodes -fr
+    sudo cp ./*.gcode /home/bttpi/printer_data/gcodes -fr
     sudo rm ./*.gcode -fr
 fi
 sync
