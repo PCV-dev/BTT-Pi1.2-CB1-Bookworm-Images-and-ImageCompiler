@@ -4,7 +4,7 @@
 
 ## are you looking for ready for use Images ?
 
-## * [go to Releales](https://github.com/PCV-dev/BTT-Pi1.2-CB1-Bookworm-Images-and-ImageCompiler/releases/)
+## * [go to Releases](https://github.com/PCV-dev/BTT-Pi1.2-CB1-Bookworm-Images-and-ImageCompiler/releases/)
 
 
 | USER    =>    PWD   |
