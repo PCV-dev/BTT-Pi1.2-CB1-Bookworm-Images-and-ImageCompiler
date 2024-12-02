@@ -112,12 +112,12 @@ LINUXFAMILY="sun50iw9"
 BOARD="h616"
 BOARD_NAME="BTT-CB1"
 
-USER_NAME="biqu"
-USER_PWD="biqu"
+USER_NAME="BTT-Pi"
+USER_PWD="pcv"
 ROOT_PWD="root"             # Must be changed @first login
 
 BRANCH="current"
-RELEASE="bookworm"          # 发行版本 bookworm/bullseye/focal/jammy 可选   
+RELEASE="bookworm"          # bookworm/bullseye/focal/jammy 可选   
 SELECTED_CONFIGURATION="cli_standard"
 ###################################################
 

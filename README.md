@@ -4,7 +4,13 @@
 
 ## are you looking for ready for use Images ?
 
-* [go to Reales](https://github.com/PCV-dev/BTT-Pi1.2-CB1-Bookworm-Images-and-ImageCompiler/releases/new)
+* [go to Reales](https://github.com/PCV-dev/BTT-Pi1.2-CB1-Bookworm-Images-and-ImageCompiler/releases/)
+
+
+| USER_NAME="BTT-Pi"  |
+|:-------------------:|
+| USER_PWD="pcv"      |
+| ROOT_PWD="root"     |
 
 
 It's done. The build tool is now working. It can build CLI_Standard and CLI_Minimal images. Kernel and Bootloader individually also work. Please use it to build your own images. Please note that you should already know what you're doing. Toolchains are not all the same. And a kernel needs to be configured first. Support requests like "I tried something and it doesn't work" will not be answered.
@@ -13,6 +19,14 @@ It's done. The build tool is now working. It can build CLI_Standard and CLI_Mini
 
 * [BigTreeTech CB1](https://github.com/bigtreetech/CB1)
 * [BigTreeTech Pi1.2](https://github.com/bigtreetech/CB1)   uses the same Image
+
+
+## Install / deployment / Use
+
+To use the images, you don't need to install anything. Download the image. Flash the image, e.g., with BalenaEtcher. Done. If you want to compile your own image, certain prerequisites are required. You can use the `Install.sh` script or manually install the necessary packages. However, it is **absolutely essential to run the `Unzip_FileList_eng.sh` script**. This script extracts all the archives containing the kernel and toolchain. (This was necessary to make the project manageable on GitHub. Uploading over 100,000 files is challenging.)
+Root privileges are not strictly required for extracting and installing the prerequisites, but since you intend to compile your own image, root access is absolutely necessary! That's why I check early on whether you can use root privileges, to avoid frustration later. The entire build process takes approximately 2 hours on my i7 system during the first run. Subsequent runs are faster as some components are reused. On my laptop, subsequent runs take about 12 minutes.
+
+
 
 ## Build Prerequisites
 
