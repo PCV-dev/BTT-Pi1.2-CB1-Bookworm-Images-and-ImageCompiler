@@ -112,7 +112,7 @@ LINUXFAMILY="sun50iw9"
 BOARD="h616"
 BOARD_NAME="BTT-Pi/CB1"
 
-USER_NAME="BTT-Pi"
+USER_NAME="bttPi"
 USER_PWD="pcv"
 ROOT_PWD="root"             # Must be changed @first login
 
