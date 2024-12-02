@@ -7,8 +7,9 @@
 * [go to Reales](https://github.com/PCV-dev/BTT-Pi1.2-CB1-Bookworm-Images-and-ImageCompiler/releases/)
 
 
+| USER    =>    PWD   |
+|:-------------------:
 | USER_NAME="BTT-Pi"  |
-|:-------------------:|
 | USER_PWD="pcv"      |
 | ROOT_PWD="root"     |
 

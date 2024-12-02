@@ -110,7 +110,7 @@ LINUXFAMILY="sun50iw9"
 
 ###################################################
 BOARD="h616"
-BOARD_NAME="BTT-CB1"
+BOARD_NAME="BTT-Pi/CB1"
 
 USER_NAME="BTT-Pi"
 USER_PWD="pcv"
