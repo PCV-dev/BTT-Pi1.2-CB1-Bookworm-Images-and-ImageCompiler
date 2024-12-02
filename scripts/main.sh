@@ -18,17 +18,26 @@ DEST="${SRC}"/output
 
 # Ätsch
 get_kernel_version() {
-	local kernel_dir="${SRC}/kernel"
-	if [[ -d "${kernel_dir}" ]]; then
-		KERNELVERSION_AKT=$(cd "${kernel_dir}" && make kernelversion)
-	else
-		echo "Kernel directory not found."
-		exit 1
-	fi
-	export KERNELVERSION_AKT
+    local kernel_dir="${SRC}/kernel"
+    if [[ -d "${kernel_dir}" && -f "${kernel_dir}/Makefile" ]]; then
+        # Wechsle in das Kernelverzeichnis und versuche die Version zu bekommen
+        KERNELVERSION_AKT=$(cd "${kernel_dir}" && make kernelversion)
+        
+        # Prüfe ob der Befehl erfolgreich war
+        if [[ $? -ne 0 ]]; then
+            echo "Fehler: Kernelversion konnte nicht ermittelt werden."
+            exit 1
+        fi
+    else
+        echo "Fehler: Kernelverzeichnis oder Makefile nicht gefunden."
+        exit 1
+    fi
 }
 
+# Test der Funktion
+
 get_kernel_version
+export KERNELVERSION_AKT
 
 
 REVISION="3.0.0"

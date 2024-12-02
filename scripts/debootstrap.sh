@@ -48,7 +48,7 @@ debootstrap_ng()
 
 
 	customize_image
-	e2label ${LOOP}p${rootpart} "rootfs" # Ätsch
+	
 
 	# remove packages that are no longer needed. Since we have intrudoced uninstall feature, we might want to clean things that are no longer needed
 	display_alert "No longer needed packages" "purge" "info"
@@ -450,9 +450,11 @@ prepare_partitions()
 	check_loop_device "$LOOP"
 	losetup $LOOP ${SDCARD}.raw
 
+	
+
 	# loop device was grabbed here, unlock
 	flock -u $FD
-	partprobe $LOOP
+	partprobe "$LOOP"
 
 	# stage: create fs, mount partitions, create fstab
 	rm -f $SDCARD/etc/fstab
@@ -466,6 +468,9 @@ prepare_partitions()
 
 		mount ${fscreateopt} $rootdevice $MOUNT/
 		# create fstab (and crypttab) entry
+
+		# Umbenennen der rootfs-Partition in ROOT
+    	e2label ${LOOP}p2 "ROOT"     # Ätsch ROOT without Name is tricky for working with it in the future.
 
 		local rootfs="UUID=$(blkid -s UUID -o value $rootdevice)"
 
@@ -523,9 +528,12 @@ prepare_partitions()
 update_initramfs()
 {
 	local chroot_target=$1
-	local VER=$2		# Ätsch kernel version
+	local VER=$2		# Ätsch  kernel version muss übergeben werden
+	echo "Kernel Version: $VER"
 	local target_dir=$(
+		# find ${chroot_target}/lib/modules/ -maxdepth 1 -type d -name 6.1.118-sun50iw9 # Bordfamiele Hardcoded for testing...
 		find ${chroot_target}/lib/modules/ -maxdepth 1 -type d -name "*${VER}*"
+		
 	)
 	if [ "$target_dir" != "" ]; then
 		update_initramfs_cmd="update-initramfs -uv -k $(basename $target_dir)"
@@ -556,7 +564,7 @@ update_initramfs()
 #
 create_image()
 {
-	local version="${BOARD^}_${REVISION}_${DISTRIBUTION,}_${RELEASE}_server_linux5.16.17"
+	local version="${BOARD^}_${REVISION}_${DISTRIBUTION,}_${RELEASE}_server_linux${KERNELVERSION_AKT}"
 
 	destimg=$DEST/images/${version}
 	rm -rf $destimg
@@ -584,7 +592,7 @@ create_image()
 		rsync -aHWXh --info=progress0,stats1 --log-file="${DEST}"/${LOG_SUBPATH}/install.log $SDCARD/boot $MOUNT
 	fi
 
-	update_initramfs "$MOUNT" "$KERNEL_VERSION"
+	update_initramfs "$MOUNT" "$KERNELVERSION_AKT"
 
 	# DEBUG: print free space
 	local freespace=$(LC_ALL=C df -h)
