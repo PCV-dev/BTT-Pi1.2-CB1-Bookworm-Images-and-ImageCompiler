@@ -1,6 +1,6 @@
 
 
-# Debian Bookworm for BTT Pi1.2 / CB1 - CLI BUILD - AllWinner H616
+# Debian Bookworm for BTT Pi1.2 / CB1 - CLI DESKTOP BUILD - AllWinner H616
 
 ## are you looking for ready for use Images ?
 
