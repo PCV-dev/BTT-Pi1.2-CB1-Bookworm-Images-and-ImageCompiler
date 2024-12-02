@@ -11,7 +11,7 @@
 # process_patch_file
 # overlayfs_wrapper
 
-# find_toolchain <compiler> <expression>. Gabs vorher nicht. Ohne läuft es nicht. Ätsch.
+# find_toolchain <compiler> <expression>. Gabs vorher nicht. Ohne läuft es nicht. Ätsch. die muss natürlich bei ATF und Kernel und U-Boot aufgerufen werden.
 find_toolchain() 
 {
 	
@@ -67,7 +67,7 @@ compile_atf()
 
 
 	local toolchain # Ätsch
-	toolchain=$(find_toolchain "$ATF_COMPILER" "$ATF_USE_GCC")
+	toolchain=$(find_toolchain "$ATF_COMPILER" "$ATF_USE_GCC") # Ätsch steuert die Toolchain auswahl
 	[[ -z $toolchain ]] && exit_with_error "Could not find required toolchain" "${ATF_COMPILER}gcc $ATF_USE_GCC"
 
 
