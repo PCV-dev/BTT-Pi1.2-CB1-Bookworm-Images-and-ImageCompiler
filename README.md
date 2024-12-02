@@ -49,11 +49,6 @@ sudo apt-get install aptly aria2 libfdt-dev libssl-dev
 | kernel  | v6.1.118 |
 | T.Chain | v11.2    |
 
-## Install / deployment
-
-To automatically install all required packages, run the `Install.sh` script as root.
-You are also welcome to install the packages manually. **BUT** the `Unzip_FileList_eng.sh` script **must** be executed, otherwise files will be missing.
-
 
 ## Project Build
 
