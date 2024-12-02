@@ -117,8 +117,8 @@ USER_PWD="pcv"
 ROOT_PWD="root"             # Must be changed @first login
 
 BRANCH="current"
-RELEASE="bookworm"          # bookworm/bullseye/focal/jammy 可选   
-SELECTED_CONFIGURATION="cli_standard"
+RELEASE="bookworm"          # bookworm/bullseye/focal/jammy   
+SELECTED_CONFIGURATION="desktop"
 ###################################################
 
 source "${SRC}"/scripts/configuration.sh
