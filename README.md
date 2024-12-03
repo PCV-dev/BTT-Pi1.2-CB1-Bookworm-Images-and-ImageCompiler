@@ -1,4 +1,4 @@
-
+# # Unfortunately there is still an error in the kernel config. Please come back in a few hours or days
 
 # Debian Bookworm for BTT Pi1.2 / CB1 - CLI DESKTOP BUILD - AllWinner H616
 
